@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Student } from './student';
 
 @Component({
@@ -7,18 +8,19 @@ import { Student } from './student';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public students:Student[];
-  public newStudent:Student = {
-    name: "Name",
-    email: "Email",
+  public students:Student[] = [{
+    name: "Parwand",
+    email: "parwand.alsino@hhu.de",
     age: 20
-  }
-  constructor() {
-    this.students = [];
-  }
+  },
+  {
+    name: "Lea",
+    email: "Lea@hhu.de",
+    age: 22
+  }]
 
-  public addStudent() {
-      this.students.push(this.newStudent);
+  public addStudent(addForm: NgForm): void{
+      this.students.push(addForm.value);
   }
 
   public deleteStudent(student:Student): void {
