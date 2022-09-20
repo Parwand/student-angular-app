@@ -19,8 +19,21 @@
 </div>
 
 
-<div *ngFor="let student of students">
-  <li>{{student.name}}</li>
-  <li>{{student.email}}</li>
-  <li>{{student.age}}</li>
-</div>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Age</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of students">
+      <th>{{student.name}}</th>
+      <th>{{student.email}}</th>
+      <th>{{student.age}}</th>
+      <th><button (click)="deleteStudent(student);">X Löschen</button></th>
+    </tr>
+  </tbody>
+</table>
