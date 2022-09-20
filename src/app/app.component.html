@@ -1,39 +1,41 @@
-<div class="display-4">
-  Student Manager
-</div>
-<form #addForm="ngForm" (ngSubmit)="addStudent(addForm)">
-  <div>
-    <label for="name">Name</label>
-    <input class="form-control" type="text" ngModel name="name" id = "name" required>
+<div class="container">
+  <div class="display-4">
+    Student Manager
   </div>
-  <div>
-    <label for="email">Email</label>
-    <input class="form-control" type="email" ngModel name="email" id="email" required>
-  </div>
-  <div>
-    <label for="age">Age</label>
-    <input class="form-control" type="number" ngModel name="age" id="age" required>
-  </div>
+  <form #addForm="ngForm" (ngSubmit)="addStudent(addForm)">
+    <div>
+      <label for="name">Name</label>
+      <input class="form-control" type="text" ngModel name="name" id = "name" required>
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input class="form-control" type="email" ngModel name="email" id="email" required>
+    </div>
+    <div>
+      <label for="age">Age</label>
+      <input class="form-control" type="number" ngModel name="age" id="age" required>
+    </div>
+    
+    <button type="submit" class="btn btn-sm btn-primary">+ Hinzufügen</button>
+  </form>
   
-  <button type="submit" class="btn btn-sm btn-primary">+ Hinzufügen</button>
-</form>
-
-
-<table class="table">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Age</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let student of students">
-      <th>{{student.name}}</th>
-      <th>{{student.email}}</th>
-      <th>{{student.age}}</th>
-      <th><button (click)="deleteStudent(student);" class="btn btn-sm btn-danger">X Löschen</button></th>
-    </tr>
-  </tbody>
-</table>
+  
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Age</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of students">
+        <th>{{student.name}}</th>
+        <th>{{student.email}}</th>
+        <th>{{student.age}}</th>
+        <th><button (click)="deleteStudent(student);" class="btn btn-sm btn-danger">X Löschen</button></th>
+      </tr>
+    </tbody>
+  </table>
+</div>
