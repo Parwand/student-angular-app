@@ -15,7 +15,7 @@
     <input class="form-control" type="number" ngModel name="age" id="age" required>
   </div>
   
-  <button type="submit">+ Hinzufügen</button>
+  <button type="submit" class="btn btn-sm btn-primary">+ Hinzufügen</button>
 </form>
 
 
@@ -33,7 +33,7 @@
       <th>{{student.name}}</th>
       <th>{{student.email}}</th>
       <th>{{student.age}}</th>
-      <th><button (click)="deleteStudent(student);">X Löschen</button></th>
+      <th><button (click)="deleteStudent(student);" class="btn btn-sm btn-danger">X Löschen</button></th>
     </tr>
   </tbody>
 </table>
