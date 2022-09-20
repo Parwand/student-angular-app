@@ -7,9 +7,9 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TodoComponent implements OnInit {
 
-  @Input() todo: {};
+  @Input() todo:{id:number, title:string, isCompleted:Boolean};
   constructor() { 
-    this.todo = [];
+    this.todo = {id:2, title:"title", isCompleted:false};
   }
 
   ngOnInit(): void {
