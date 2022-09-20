@@ -20,4 +20,8 @@ export class AppComponent {
   public addStudent() {
       this.students.push(this.newStudent);
   }
+
+  public deleteStudent(student:Student): void {
+    this.students = this.students.filter(s => s != student);
+  }
 }
