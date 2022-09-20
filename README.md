@@ -1,3 +1,5 @@
+![screenshot of the appearance](src/assets/images/apperance.png)
+
 # StudentAngularApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.3.
