@@ -8,7 +8,16 @@ import { Student } from './student';
 })
 export class AppComponent {
   public students:Student[];
+  public newStudent:Student = {
+    name: "Name",
+    email: "Email",
+    age: 20
+  }
   constructor() {
     this.students = [];
+  }
+
+  public addStudent() {
+      this.students.push(this.newStudent);
   }
 }
