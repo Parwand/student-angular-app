@@ -1,7 +1,7 @@
 <div class="todo-item" [ngClass]="{'todo-completed': todo.isCompleted}">
     <div class="row">
         <div class="col-10">
-            <input type="checkbox" [checked] = "todo.isCompleted"> {{todo.title}}
+            <input type="checkbox" [checked] = "todo.isCompleted" (change)="changeMode(todo)"> {{todo.title}}
         </div>
         <div class="col-2">
             <button class="btn btn-sm btn-outline-danger">DELTETE</button>
