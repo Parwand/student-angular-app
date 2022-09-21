@@ -15,4 +15,8 @@ export class TodoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public changeMode(todo:any): void {
+    this.todo.isCompleted = ! todo.isCompleted;
+  }
+
 }
